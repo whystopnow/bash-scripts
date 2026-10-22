@@ -19,8 +19,6 @@ if [[ -z $1 ]]; then
 				echo "[DOWN] $target is currently DOWN."
 				(( counter++ ))
 
-				max_attempts=20 # 20 - 1 min, 40 - 2 min, etc.
-
 				if (( counter > max_attempts )); then
 					echo "[ERROR] Target address did not respond. Exiting."
 					exit 1
